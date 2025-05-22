@@ -76,10 +76,10 @@ function atualizeMediaFinal() {
     const mediaFinal = calculaMediaFinal(); // Calcula a média usando outra função
 
     // Exibe o valor numérico da média
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML.toFixed(2) = mediaFinal;
     // Exibe o status de aprovado ou reprovado conforme a média e a nota mínima
-    document.getElementById('media-final-resultado').innerHTML =
-        mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
+    document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
+    
 }   
 
 /**
