@@ -25,7 +25,7 @@ form.addEventListener('submit', function(e) {
 
     adicionaLinha();        // Chama a função que adiciona uma nova linha de atividade
     atualizaTabela();       // Atualiza o corpo da tabela com as linhas acumuladas
-    atualizeMediaFinal();   // Recalcula e exibe a média final das notas
+    atualizaMediaFinal();   // Recalcula e exibe a média final das notas
 });
 
 /**
@@ -72,20 +72,17 @@ function atualizaTabela() {
 /**
  * Função que calcula a média final e atualiza o rodapé da tabela
  */
-function atualizeMediaFinal() {
+function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal(); // Calcula a média usando outra função
 
     // Exibe o valor numérico da média
-    document.getElementById('media-final-valor').innerHTML.toFixed(2) = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     // Exibe o status de aprovado ou reprovado conforme a média e a nota mínima
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
     
 }   
 
-/**
- * Função que percorre o array de notas, soma todas e retorna a média
- * @returns {number} Média aritmética das notas cadastradas
- */
+
 function calculaMediaFinal() {
     let somaDasNotas = 0;
 
