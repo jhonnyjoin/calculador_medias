@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+}
+
+body {
+    background-color: #e7e7e7;
+    padding-top: 100px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header img {
+    height: 36px;
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Container centralizado e com largura máxima */
+.container {
+    max-width: 960px;         /* Largura máxima do container */
+    width: 100%;              /* Ocupar 100% do espaço disponível */
+    margin: 0 auto;           /* Centraliza horizontalmente */
+}
+
+/* Formulário: largura máxima, disposição em linha com espaços entre elementos e espaçamento interno */
+form {
+    display: flex;                        /* Disposição dos campos em linha */
+    max-width: 640px;                     /* Limita a largura máxima do formulário */
+    width: 100%;                          /* Ocupar 100% do espaço disponível */
+    justify-content: space-between;       /* Espaça igualmente os elementos */
+    margin-bottom: 56px;                  /* Espaço abaixo do form */
+}
+
+/* Inputs do formulário: nome e nota */
+form input {
+    font-size: 24px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid #000;
+    padding: 8px; /*preechimento interno*/
+    
+    /*resolver o problema do input nota*/
+    flex-grow: 1; /* Permite o input expandir conforme disponível */
+    margin-right: 8px;  /* Espaço entre os inputs */
+}
+
+form button {
+    background-color: #009432;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+form button:hover {
+    background-color:#007025 ;
+}
+
+table {
+    width: 100%; /*ocupar todo o espaço disponivel*/
+    /*retirar os espaçamento entre as colunas*/
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table th {
+    border-bottom:  2px solid #000;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Células da tabela: padding para legibilidade */
+table td {
+    padding: 16px 0;            /* Espaçamento interno */
+    text-align: center;         /* Alinhamento ao centro */
+    font-size: 18px;          /* Tamanho de fonte */
+    border-bottom: 1px solid rgba(0,0,0,0.1); /*Linha divisória entre linhas*/
+}
+
+table td img {
+    height: 30px;
+}
+
+/* Classe para status de resultado: borda arredondada e texto claro */
+.resultado {
+    padding: 8px;             /* Espaçamento interno */
+    font-weight: bold;        /* Negrito */
+    color: #fff;              /* Texto branco */
+    background-color: #000;   /* Fundo preto */
+    border-radius: 3px;       /* Cantos levemente arredondados */
+}
+
+/* Aplica fundo verde para aprovado */
+.aprovado {
+    background-color: #009432;
+}
+
+/* Aplica fundo vermelho para reprovado */
+.reprovado {
+    background-color: red;
+}
